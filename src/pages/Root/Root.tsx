@@ -1,5 +1,11 @@
 const Root = () => {
-  return <div>Root</div>;
+  return (
+    <div>
+      <h1>Root</h1>
+      <button>about</button>
+      {/* <Link>about</Link> */}
+    </div>
+  );
 };
 
 export default Root;
