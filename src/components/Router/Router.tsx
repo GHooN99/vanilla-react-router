@@ -1,4 +1,4 @@
-import { useState, createContext, type ReactNode } from "react";
+import { useState, createContext, useEffect, type ReactNode } from "react";
 
 interface RouterContextValue {
   currentPath: string;
@@ -16,9 +16,23 @@ const Router = ({ children }: RouterProps) => {
     window.location.pathname
   );
 
+  // componentDidMount
+  useEffect(() => {
+    const handleCurrentPathChange = (event: PopStateEvent) => {
+      setCurrentPath(event.state?.path ?? "/");
+    };
+
+    window.addEventListener("popstate", handleCurrentPathChange);
+
+    // componentWillUnmount
+    return () => {
+      window.removeEventListener("popstate", handleCurrentPathChange);
+    };
+  }, []);
+
   const changePath = (to: string) => {
-    /* 브라우저의 주소를 바꿈 */
-    window.history.pushState("", "", to);
+    /* 브라우저의 주소를 바꿈  첫번째 인자는 popState event 에서 state 를 꺼내갈 수 있게 */
+    window.history.pushState({ path: to }, "", to);
     /* 리렌더링을 위한 path 상태 업데이트 */
     setCurrentPath(to);
   };
