@@ -1,9 +1,10 @@
+import { Link } from "@components/Link";
+
 const Root = () => {
   return (
     <div>
       <h1>Root</h1>
-      <button>about</button>
-      {/* <Link>about</Link> */}
+      <Link to="/about">about</Link>
     </div>
   );
 };
