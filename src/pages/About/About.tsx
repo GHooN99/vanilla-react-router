@@ -1,9 +1,10 @@
+import { Link } from "@components/Link";
+
 const About = () => {
   return (
     <div>
       <h1>About</h1>
-      <button>go main</button>
-      {/* <Link>about</Link> */}
+      <Link to="/">go main</Link>
     </div>
   );
 };
