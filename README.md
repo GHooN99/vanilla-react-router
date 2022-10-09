@@ -2,7 +2,7 @@
 
 > 원티드 프리온보딩 챌린지 10월 1회차 과제
 
-### [생각 정리](https://confirmed-textbook-87e.notion.site/vanilla-react-router-96cd67c301a54f858ba646ab5e4221fe)
+### [생각 정리 블로그](https://ghoon99.tistory.com/91)
 
 > 과제를 진행하는 동시에 기록을 남겨놓았습니다. 이런 사고 흐름을 거치며 과제를 진행했습니다.
 
