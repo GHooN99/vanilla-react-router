@@ -1,16 +1,12 @@
-import { type ReactNode } from "react";
-import { useRouter } from "@hooks/useRouter";
+import type { ReactNode } from "react";
 
-interface RouterProps {
+export interface RouteProps {
   path: string;
   component: ReactNode;
 }
 
-/* 지정한 path와 현재 경로가 같을 때 컴포넌트를 렌더링한다. */
-const Route = ({ path, component }: RouterProps) => {
-  const router = useRouter();
-  if (router.pathname !== path) return null;
-
+/* 아무 로직도 없는 껍데기  */
+const Route = ({ component }: RouteProps) => {
   return <>{component}</>;
 };
 
