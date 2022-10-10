@@ -40,24 +40,21 @@ ReactDOM.createRoot(container).render(
 const { push } = useRouter();
 ```
 
-### 폴더 구조
+### 주요 폴더 구조
 
 ```
 src
-├── assets
-│   └── react.svg
+├── index.tsx
 ├── components
 │   ├── Link
 │   ├── Route
+│   ├── Routes
 │   └── Router
 ├── hooks
 │   └── useRouter.ts
-├── index.css
-├── index.tsx
 ├── pages
 │   ├── About
 │   └── Root
-└── vite-env.d.ts
 
 ```
 
